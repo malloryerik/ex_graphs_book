@@ -3,11 +3,28 @@ defmodule ExGraphsBook.MixProject do
 
   def project do
     [
+      aliases: aliases(),
+      apps: [
+        :d_graph,
+        :graph_commons,
+        :graph_compute,
+        :native_graph
+      ],
       apps_path: "apps",
       version: "0.1.0",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      docs: [
+        main: "readme",
+        extras: ["README.md"]
+      ]
     ]
+  end
+
+  # Allows us to add shortcuts or tasks specific to the
+  # current project.
+  defp aliases do
+    []
   end
 
   # Dependencies listed here are available only for this
@@ -15,6 +32,7 @@ defmodule ExGraphsBook.MixProject do
   # the apps folder.
   #
   # Run "mix help deps" for examples and options.
+
   defp deps do
     []
   end
