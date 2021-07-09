@@ -24,7 +24,9 @@ defmodule ExGraphsBook.MixProject do
   # Allows us to add shortcuts or tasks specific to the
   # current project.
   defp aliases do
-    []
+    [
+      test_graph_commons: "cmd --app graph_commons mix test --color"
+    ]
   end
 
   # Dependencies listed here are available only for this
